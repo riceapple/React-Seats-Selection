@@ -1,0 +1,79 @@
+:global{
+  @keyframes fadeIn {
+      0% { opacity: 1; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+  }
+}
+.previewStage {
+  position: relative;
+  // background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  // transform: scale(0.6);
+  top: 0;
+  left: 0;
+  float: left;
+  transform-origin: 0 0;
+  min-width: 250px;
+  min-height: 150px;
+  padding: 5px;
+  // opacity: 0;
+  // animation: fadeIn 3s;
+  
+.thumbnailBorder{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  padding: 0.013333rem;
+  // position: relative;
+    &:after{
+      width: 200%;
+      height: 200%;
+      border-radius: 0;
+      transform: scale(0.5);
+      content: "";
+      pointer-events: none;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      border: 2PX solid #f00;
+      border-radius: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+   
+    }
+}
+
+  & > div{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: center;
+    & > div{
+      width:5px;
+      height: 5px;
+      overflow: hidden;
+      margin: 2px;
+    }
+  }
+  .loved{
+    width: 14px;
+    height: 5px;
+  }
+  .white{
+    background: #fff;
+    opacity: .5;
+  }
+  .green{
+    background: #32e81e;
+    opacity: .8;
+  }
+  .red{
+    background: #f00;
+    opacity: .5;
+  }
+}
